@@ -1,0 +1,485 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="496,705" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="23">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="17">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="476,605" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" ApiKey="UZfUF4MbCmL9354/DKVJzMkvnUKp0JWb504UjYlqJSO8lpaF5G0cZVNHrT4Y6Y17" DisplayName="CV Screen Scope 'AVL_AVView'" sap:VirtualizedContainerService.HintSize="434,513" sap2010:WorkflowViewState.IdRef="CVScope_1" Version="V1">
+      <p:CVScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="DateVariable" />
+            </Sequence.Variables>
+            <p:CvGetTextWithDescriptor Descriptor="[&quot;Target: Cell (73,466,62,64)&quot; +&#xD;&#xA;&quot;Anchor: Text '1' (54,482,4,12)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Date' (91,411,31,12)&quot;]" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Cell" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_3" InformativeScreenshot="88422739105378de7ef6e3c2add698fc" Result="[DateVariable]" Version="V1">
+              <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor>
+                  <uc:CvDescriptor.Anchors>
+                    <x:Array Type="uc:CvElementDescriptor">
+                      <uc:CvElementDescriptor DesignTimeArea="54, 482, 4, 12" ElementType="Text" Text="1" />
+                      <uc:CvElementDescriptor DesignTimeArea="91, 411, 31, 12" ElementType="Text" Text="Date" />
+                    </x:Array>
+                  </uc:CvDescriptor.Anchors>
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor DesignTimeArea="73, 466, 62, 64" ElementType="Cell" />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+            </p:CvGetTextWithDescriptor>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="400,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[DateVariable]" />
+          </Sequence>
+        </ActivityAction>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache InformativeScreenshot="6a6b173e8496a3b646c62749db497527" LogicalPosition="79, 127" OcrText="your EOB .&#xD;&#xA;Explanation of Benefits&#xD;&#xA;(EOB)&#xD;&#xA;Statement date: XXXXXX&#xD;&#xA;Document number: XXXXXXXXXXXXXXXXXX Customer service: 1-800-123-4567&#xD;&#xA;THIS IS NOT A BILL&#xD;&#xA;Subscriber number: XXXXXXXXX&#xD;&#xA;Patient name:&#xD;&#xA;Date received:&#xD;&#xA;Claim Detail II): XXXX-XXXX-X&#xD;&#xA;Provider:&#xD;&#xA;Payee:&#xD;&#xA;What your provider&#xD;&#xA;can charge you Member name:&#xD;&#xA;Address:&#xD;&#xA;City, State, Zip:&#xD;&#xA;Group: ABCDE&#xD;&#xA;Your responsibility&#xD;&#xA;Co- Deduct- co- Group number: XXXXXX&#xD;&#xA;Claim number: XXXXXXXXXX&#xD;&#xA;n-sit-l. YYYYYYYY&#xD;&#xA;Total Claim Cost&#xD;&#xA;Date&#xD;&#xA;Line of Ser- O&#xD;&#xA;Service&#xD;&#xA;Descrip-&#xD;&#xA;tion&#xD;&#xA;Medical&#xD;&#xA;care&#xD;&#xA;Medical&#xD;&#xA;care Claim&#xD;&#xA;Status&#xD;&#xA;Total Provider&#xD;&#xA;Charges&#xD;&#xA;$31.60&#xD;&#xA;$375.00&#xD;&#xA;$406.60 Allowed&#xD;&#xA;Charges&#xD;&#xA;$2.15&#xD;&#xA;$118.12&#xD;&#xA;$120.27 Paid by&#xD;&#xA;Insurer&#xD;&#xA;$85.27 You Remark&#xD;&#xA;No.&#xD;&#xA;1&#xD;&#xA;2 vice&#xD;&#xA;3/20/14—&#xD;&#xA;3/20/14&#xD;&#xA;3/20/14—&#xD;&#xA;3/20/14 Pay&#xD;&#xA;$0.00&#xD;&#xA;$35.00&#xD;&#xA;$35.00 $0.00&#xD;&#xA;$0.00&#xD;&#xA;$0.00 Insurance&#xD;&#xA;$0.00&#xD;&#xA;$0.00&#xD;&#xA;$0.00 Owe&#xD;&#xA;$0.00&#xD;&#xA;$35.00&#xD;&#xA;$35.00 Code&#xD;&#xA;PDC&#xD;&#xA;PDC&#xD;&#xA;Remark Code: PDC—Billed amount is higher than the maximum payment insurance allows. The payment is for the&#xD;&#xA;allowed amount. O Service Description is a&#xD;&#xA;description of the health care&#xD;&#xA;services you received, like&#xD;&#xA;a medical visit, lab tests, or&#xD;&#xA;screenings.&#xD;&#xA;@ Provider Charges is the&#xD;&#xA;amount your provider bills fol&#xD;&#xA;your visit.&#xD;&#xA;O Allowed Charges is the&#xD;&#xA;amount your provider will be&#xD;&#xA;reimbursed; this may not be •&#xD;&#xA;same as the Provider Charge&#xD;&#xA;O Paid by Insurer is the amour&#xD;&#xA;your insurance plan will pay i&#xD;&#xA;your provider.&#xD;&#xA;Contact your health plan if" Position="79, 127" ScreenshotGuid="d012e89d-7aad-4570-aa05-605af276e250" ServerVersion="1">
+          <uc:CVCache.CvTables>
+            <x:Array Type="uc:CvTableInfo">
+              <uc:CvTableInfo>
+                <uc:CvTableInfo.Columns>
+                  <x:Array Type="x:Int32">
+                    <x:Int32>35</x:Int32>
+                    <x:Int32>73</x:Int32>
+                    <x:Int32>135</x:Int32>
+                    <x:Int32>207</x:Int32>
+                    <x:Int32>264</x:Int32>
+                    <x:Int32>337</x:Int32>
+                    <x:Int32>410</x:Int32>
+                    <x:Int32>462</x:Int32>
+                    <x:Int32>523</x:Int32>
+                    <x:Int32>603</x:Int32>
+                    <x:Int32>685</x:Int32>
+                    <x:Int32>735</x:Int32>
+                    <x:Int32>795</x:Int32>
+                  </x:Array>
+                </uc:CvTableInfo.Columns>
+                <uc:CvTableInfo.Rows>
+                  <x:Array Type="x:Int32">
+                    <x:Int32>380</x:Int32>
+                    <x:Int32>466</x:Int32>
+                    <x:Int32>530</x:Int32>
+                    <x:Int32>583</x:Int32>
+                    <x:Int32>620</x:Int32>
+                  </x:Array>
+                </uc:CvTableInfo.Rows>
+              </uc:CvTableInfo>
+              <uc:CvTableInfo>
+                <uc:CvTableInfo.Columns>
+                  <x:Array Type="x:Int32">
+                    <x:Int32>36</x:Int32>
+                    <x:Int32>264</x:Int32>
+                    <x:Int32>409</x:Int32>
+                    <x:Int32>602</x:Int32>
+                    <x:Int32>795</x:Int32>
+                  </x:Array>
+                </uc:CvTableInfo.Columns>
+                <uc:CvTableInfo.Rows>
+                  <x:Array Type="x:Int32">
+                    <x:Int32>308</x:Int32>
+                    <x:Int32>381</x:Int32>
+                  </x:Array>
+                </uc:CvTableInfo.Rows>
+              </uc:CvTableInfo>
+            </x:Array>
+          </uc:CVCache.CvTables>
+          <uc:CVCache.CvUiElements>
+            <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+              <uc:CvElementInfo Category="Icon" Region="978, 105, 32, 30" />
+              <uc:CvElementInfo Category="Icon" Region="978, 525, 32, 32" />
+              <uc:CvElementInfo Category="Icon" Region="978, 384, 30, 31" />
+              <uc:CvElementInfo Category="Icon" Region="289, 262, 29, 30" />
+              <uc:CvElementInfo Category="Icon" Region="634, 388, 29, 29" />
+              <uc:CvElementInfo Category="Icon" Region="291, 378, 29, 29" />
+              <uc:CvElementInfo Category="Icon" Region="978, 274, 30, 32" />
+              <uc:CvElementInfo Category="Icon" Region="361, 377, 28, 29" />
+              <uc:CvElementInfo Category="Icon" Region="755, 388, 29, 28" />
+              <uc:CvElementInfo Category="Icon" Region="161, 378, 28, 27" />
+              <uc:CvElementInfo Category="Icon" Region="647, 109, 88, 93" />
+              <uc:CvElementInfo Category="Cell" Region="207, 583, 57, 36" />
+              <uc:CvElementInfo Category="Cell" Region="264, 583, 73, 36" />
+              <uc:CvElementInfo Category="Cell" Region="523, 583, 80, 36" />
+              <uc:CvElementInfo Category="Cell" Region="462, 583, 61, 36" />
+              <uc:CvElementInfo Category="Cell" Region="603, 583, 82, 36" />
+              <uc:CvElementInfo Category="Cell" Region="337, 583, 73, 36" />
+              <uc:CvElementInfo Category="Cell" Region="410, 583, 52, 36" />
+              <uc:CvElementInfo Category="Cell" Region="685, 583, 51, 36" />
+              <uc:CvElementInfo Category="Cell" Region="207, 530, 57, 53" />
+              <uc:CvElementInfo Category="Cell" Region="135, 583, 72, 36" />
+              <uc:CvElementInfo Category="Cell" Region="523, 530, 80, 53" />
+              <uc:CvElementInfo Category="Cell" Region="462, 530, 61, 53" />
+              <uc:CvElementInfo Category="Cell" Region="73, 583, 62, 36" />
+              <uc:CvElementInfo Category="Cell" Region="264, 530, 73, 53" />
+              <uc:CvElementInfo Category="Cell" Region="523, 379, 80, 87" />
+              <uc:CvElementInfo Category="Cell" Region="207, 466, 57, 64" />
+              <uc:CvElementInfo Category="Cell" Region="603, 530, 82, 53" />
+              <uc:CvElementInfo Category="Cell" Region="603, 379, 82, 87" />
+              <uc:CvElementInfo Category="Cell" Region="337, 530, 73, 53" />
+              <uc:CvElementInfo Category="Cell" Region="410, 530, 52, 53" />
+              <uc:CvElementInfo Category="Cell" Region="337, 466, 73, 64" />
+              <uc:CvElementInfo Category="Cell" Region="603, 466, 82, 64" />
+              <uc:CvElementInfo Category="Cell" Region="35, 466, 38, 64" />
+              <uc:CvElementInfo Category="Cell" Region="523, 466, 80, 64" />
+              <uc:CvElementInfo Category="Cell" Region="264, 466, 73, 64" />
+              <uc:CvElementInfo Category="Cell" Region="135, 466, 72, 64" />
+              <uc:CvElementInfo Category="Cell" Region="462, 466, 61, 64" />
+              <uc:CvElementInfo Category="Cell" Region="685, 466, 51, 64" />
+              <uc:CvElementInfo Category="Cell" Region="685, 530, 51, 53" />
+              <uc:CvElementInfo Category="Cell" Region="736, 466, 62, 64" />
+              <uc:CvElementInfo Category="Cell" Region="35, 530, 38, 53" />
+              <uc:CvElementInfo Category="Cell" Region="73, 466, 62, 64" />
+              <uc:CvElementInfo Category="Cell" Region="462, 379, 61, 87" />
+              <uc:CvElementInfo Category="Cell" Region="264, 379, 73, 87" />
+              <uc:CvElementInfo Category="Cell" Region="410, 466, 52, 64" />
+              <uc:CvElementInfo Category="Cell" Region="736, 583, 62, 36" />
+              <uc:CvElementInfo Category="Cell" Region="135, 530, 72, 53" />
+              <uc:CvElementInfo Category="Cell" Region="685, 379, 51, 87" />
+              <uc:CvElementInfo Category="Cell" Region="135, 379, 72, 87" />
+              <uc:CvElementInfo Category="Cell" Region="337, 379, 73, 87" />
+              <uc:CvElementInfo Category="Cell" Region="73, 530, 62, 53" />
+              <uc:CvElementInfo Category="Cell" Region="736, 530, 62, 53" />
+              <uc:CvElementInfo Category="Cell" Region="410, 379, 52, 87" />
+              <uc:CvElementInfo Category="Cell" Region="35, 583, 38, 36" />
+              <uc:CvElementInfo Category="Cell" Region="207, 379, 57, 87" />
+              <uc:CvElementInfo Category="Cell" Region="73, 379, 62, 87" />
+              <uc:CvElementInfo Category="Cell" Region="736, 379, 62, 87" />
+              <uc:CvElementInfo Category="Cell" Region="35, 379, 38, 87" />
+              <uc:CvElementInfo Category="Cell" Region="602, 309, 194, 72" />
+              <uc:CvElementInfo Category="Cell" Region="409, 309, 193, 72" />
+              <uc:CvElementInfo Category="Cell" Region="37, 309, 227, 72" />
+              <uc:CvElementInfo Category="Cell" Region="264, 309, 145, 72" />
+              <uc:CvElementInfo Category="Cell" Region="575, 210, 221, 36" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="979, 274, 30, 32" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="978, 385, 31, 30" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="289, 263, 29, 29" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="647, 111, 91, 92" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="978, 525, 32, 32" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="700, 390, 28, 26" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="634, 387, 30, 29" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1231, 673, 23, 26" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="612, 321, 187, 56" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="290, 379, 30, 29" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="741, 383, 55, 49" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="752, 386, 34, 30" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1231, 2, 13, 7" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="736, 619, 65, 26" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="35, 466, 38, 0" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="135, 619, 72, 26" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="575, 246, 221, 63" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="274, 210, 152, 36" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="426, 210, 149, 36" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="37, 309, 237, 0" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 446, 332, 29" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 100, 332, 178" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 475, 332, 35" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 308, 332, 28" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="888, 649, 366, 64" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 510, 332, 139" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 414, 332, 32" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 278, 332, 58" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 336, 332, 40" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 619, 332, 30" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 465, 0, 45" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 619, 332, 0" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 278, 332, 0" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 376, 332, 70" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 510, 332, 0" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 278, 332, 232" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="922, 619, 0, 0" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="3, 3, 0, 50" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="3, 3, 1048, 50" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="933, 25, 322, 58" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="945, 2, 310, 25" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="42, 245, 234, 49" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="7, 0, 42, 3" />
+              <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1247, 84, 7, 34" />
+            </scg:List>
+          </uc:CVCache.CvUiElements>
+          <uc:CVCache.OcrTexts>
+            <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="256">
+              <uc:OcrTextInfo Region="34, 16, 49, 18" Text="your" />
+              <uc:OcrTextInfo Region="92, 11, 48, 18" Text="EOB" />
+              <uc:OcrTextInfo Region="151, 26, 3, 3" Text="." />
+              <uc:OcrTextInfo Region="49, 70, 114, 23" Text="Explanation" />
+              <uc:OcrTextInfo Region="171, 70, 20, 18" Text="of" />
+              <uc:OcrTextInfo Region="198, 70, 79, 18" Text="Benefits" />
+              <uc:OcrTextInfo Region="48, 99, 52, 21" Text="(EOB)" />
+              <uc:OcrTextInfo Region="47, 145, 72, 12" Text="Statement" />
+              <uc:OcrTextInfo Region="125, 144, 34, 13" Text="date:" />
+              <uc:OcrTextInfo Region="164, 145, 52, 12" Text="XXXXXX" />
+              <uc:OcrTextInfo Region="47, 165, 71, 12" Text="Document" />
+              <uc:OcrTextInfo Region="123, 164, 56, 13" Text="number:" />
+              <uc:OcrTextInfo Region="184, 165, 158, 12" Text="XXXXXXXXXXXXXXXXXX" />
+              <uc:OcrTextInfo Region="486, 81, 60, 12" Text="Customer" />
+              <uc:OcrTextInfo Region="551, 81, 46, 12" Text="service:" />
+              <uc:OcrTextInfo Region="603, 81, 102, 12" Text="1-800-123-4567" />
+              <uc:OcrTextInfo Region="46, 191, 36, 15" Text="THIS" />
+              <uc:OcrTextInfo Region="90, 191, 13, 15" Text="IS" />
+              <uc:OcrTextInfo Region="112, 191, 33, 15" Text="NOT" />
+              <uc:OcrTextInfo Region="149, 191, 12, 15" Text="A" />
+              <uc:OcrTextInfo Region="168, 191, 33, 15" Text="BILL" />
+              <uc:OcrTextInfo Region="38, 223, 73, 13" Text="Subscriber" />
+              <uc:OcrTextInfo Region="117, 223, 56, 13" Text="number:" />
+              <uc:OcrTextInfo Region="178, 224, 78, 12" Text="XXXXXXXXX" />
+              <uc:OcrTextInfo Region="63, 262, 48, 12" Text="Patient" />
+              <uc:OcrTextInfo Region="117, 265, 41, 9" Text="name:" />
+              <uc:OcrTextInfo Region="63, 282, 31, 12" Text="Date" />
+              <uc:OcrTextInfo Region="101, 281, 61, 13" Text="received:" />
+              <uc:OcrTextInfo Region="111, 344, 38, 13" Text="Claim" />
+              <uc:OcrTextInfo Region="155, 344, 40, 13" Text="Detail" />
+              <uc:OcrTextInfo Region="315, 224, 17, 12" Text="II):" />
+              <uc:OcrTextInfo Region="337, 224, 78, 12" Text="XXXX-XXXX-X" />
+              <uc:OcrTextInfo Region="328, 261, 61, 13" Text="Provider:" />
+              <uc:OcrTextInfo Region="328, 282, 43, 16" Text="Payee:" />
+              <uc:OcrTextInfo Region="271, 334, 37, 13" Text="What" />
+              <uc:OcrTextInfo Region="312, 338, 31, 13" Text="your" />
+              <uc:OcrTextInfo Region="349, 334, 59, 17" Text="provider" />
+              <uc:OcrTextInfo Region="287, 358, 23, 9" Text="can" />
+              <uc:OcrTextInfo Region="316, 354, 46, 17" Text="charge" />
+              <uc:OcrTextInfo Region="367, 358, 25, 13" Text="you" />
+              <uc:OcrTextInfo Region="434, 144, 51, 13" Text="Member" />
+              <uc:OcrTextInfo Region="491, 148, 38, 9" Text="name:" />
+              <uc:OcrTextInfo Region="432, 164, 54, 13" Text="Address:" />
+              <uc:OcrTextInfo Region="433, 185, 25, 16" Text="City," />
+              <uc:OcrTextInfo Region="464, 185, 34, 14" Text="State," />
+              <uc:OcrTextInfo Region="503, 185, 23, 16" Text="Zip:" />
+              <uc:OcrTextInfo Region="473, 224, 46, 16" Text="Group:" />
+              <uc:OcrTextInfo Region="524, 224, 43, 12" Text="ABCDE" />
+              <uc:OcrTextInfo Region="443, 345, 31, 12" Text="Your" />
+              <uc:OcrTextInfo Region="480, 344, 94, 17" Text="responsibility" />
+              <uc:OcrTextInfo Region="427, 432, 22, 12" Text="Co-" />
+              <uc:OcrTextInfo Region="468, 431, 53, 13" Text="Deduct-" />
+              <uc:OcrTextInfo Region="554, 432, 22, 12" Text="co-" />
+              <uc:OcrTextInfo Region="625, 224, 42, 16" Text="Group" />
+              <uc:OcrTextInfo Region="673, 223, 57, 13" Text="number:" />
+              <uc:OcrTextInfo Region="735, 224, 52, 12" Text="XXXXXX" />
+              <uc:OcrTextInfo Region="588, 271, 38, 13" Text="Claim" />
+              <uc:OcrTextInfo Region="632, 271, 57, 13" Text="number:" />
+              <uc:OcrTextInfo Region="694, 272, 87, 12" Text="XXXXXXXXXX" />
+              <uc:OcrTextInfo Region="626, 291, 33, 9" Text="n-sit-l." />
+              <uc:OcrTextInfo Region="665, 292, 69, 8" Text="YYYYYYYY" />
+              <uc:OcrTextInfo Region="643, 344, 33, 13" Text="Total" />
+              <uc:OcrTextInfo Region="682, 344, 38, 13" Text="Claim" />
+              <uc:OcrTextInfo Region="726, 345, 31, 12" Text="Cost" />
+              <uc:OcrTextInfo Region="91, 411, 31, 12" Text="Date" />
+              <uc:OcrTextInfo Region="44, 432, 27, 12" Text="Line" />
+              <uc:OcrTextInfo Region="84, 431, 14, 13" Text="of" />
+              <uc:OcrTextInfo Region="103, 432, 25, 12" Text="Ser-" />
+              <uc:OcrTextInfo Region="162, 381, 24, 24" Text="O" />
+              <uc:OcrTextInfo Region="149, 411, 50, 12" Text="Service" />
+              <uc:OcrTextInfo Region="146, 432, 56, 16" Text="Descrip-" />
+              <uc:OcrTextInfo Region="160, 452, 27, 12" Text="tion" />
+              <uc:OcrTextInfo Region="149, 481, 49, 13" Text="Medical" />
+              <uc:OcrTextInfo Region="161, 505, 26, 9" Text="care" />
+              <uc:OcrTextInfo Region="149, 544, 49, 13" Text="Medical" />
+              <uc:OcrTextInfo Region="161, 569, 26, 9" Text="care" />
+              <uc:OcrTextInfo Region="219, 431, 38, 13" Text="Claim" />
+              <uc:OcrTextInfo Region="217, 452, 43, 12" Text="Status" />
+              <uc:OcrTextInfo Region="222, 597, 31, 13" Text="Total" />
+              <uc:OcrTextInfo Region="274, 431, 58, 13" Text="Provider" />
+              <uc:OcrTextInfo Region="275, 451, 55, 17" Text="Charges" />
+              <uc:OcrTextInfo Region="285, 481, 43, 14" Text="$31.60" />
+              <uc:OcrTextInfo Region="277, 544, 51, 14" Text="$375.00" />
+              <uc:OcrTextInfo Region="277, 597, 51, 14" Text="$406.60" />
+              <uc:OcrTextInfo Region="346, 431, 57, 13" Text="Allowed" />
+              <uc:OcrTextInfo Region="348, 451, 55, 17" Text="Charges" />
+              <uc:OcrTextInfo Region="367, 481, 35, 14" Text="$2.15" />
+              <uc:OcrTextInfo Region="351, 544, 50, 14" Text="$118.12" />
+              <uc:OcrTextInfo Region="351, 597, 51, 14" Text="$120.27" />
+              <uc:OcrTextInfo Region="621, 431, 27, 13" Text="Paid" />
+              <uc:OcrTextInfo Region="655, 431, 16, 17" Text="by" />
+              <uc:OcrTextInfo Region="622, 452, 47, 12" Text="Insurer" />
+              <uc:OcrTextInfo Region="623, 597, 43, 14" Text="$85.27" />
+              <uc:OcrTextInfo Region="698, 432, 25, 12" Text="You" />
+              <uc:OcrTextInfo Region="740, 431, 52, 13" Text="Remark" />
+              <uc:OcrTextInfo Region="47, 452, 21, 12" Text="No." />
+              <uc:OcrTextInfo Region="54, 482, 4, 12" Text="1" />
+              <uc:OcrTextInfo Region="53, 545, 7, 12" Text="2" />
+              <uc:OcrTextInfo Region="92, 452, 28, 12" Text="vice" />
+              <uc:OcrTextInfo Region="77, 482, 58, 12" Text="3/20/14—" />
+              <uc:OcrTextInfo Region="82, 502, 48, 12" Text="3/20/14" />
+              <uc:OcrTextInfo Region="77, 545, 58, 12" Text="3/20/14—" />
+              <uc:OcrTextInfo Region="82, 566, 48, 12" Text="3/20/14" />
+              <uc:OcrTextInfo Region="427, 452, 23, 16" Text="Pay" />
+              <uc:OcrTextInfo Region="424, 481, 35, 14" Text="$0.00" />
+              <uc:OcrTextInfo Region="416, 544, 43, 14" Text="$35.00" />
+              <uc:OcrTextInfo Region="416, 597, 43, 14" Text="$35.00" />
+              <uc:OcrTextInfo Region="477, 481, 35, 14" Text="$0.00" />
+              <uc:OcrTextInfo Region="477, 544, 35, 14" Text="$0.00" />
+              <uc:OcrTextInfo Region="477, 597, 35, 14" Text="$0.00" />
+              <uc:OcrTextInfo Region="532, 452, 66, 12" Text="Insurance" />
+              <uc:OcrTextInfo Region="547, 481, 36, 14" Text="$0.00" />
+              <uc:OcrTextInfo Region="547, 544, 36, 14" Text="$0.00" />
+              <uc:OcrTextInfo Region="547, 597, 36, 14" Text="$0.00" />
+              <uc:OcrTextInfo Region="696, 452, 30, 12" Text="Owe" />
+              <uc:OcrTextInfo Region="698, 481, 35, 14" Text="$0.00" />
+              <uc:OcrTextInfo Region="690, 544, 43, 14" Text="$35.00" />
+              <uc:OcrTextInfo Region="690, 597, 43, 14" Text="$35.00" />
+              <uc:OcrTextInfo Region="748, 451, 35, 13" Text="Code" />
+              <uc:OcrTextInfo Region="753, 482, 25, 12" Text="PDC" />
+              <uc:OcrTextInfo Region="753, 545, 25, 12" Text="PDC" />
+              <uc:OcrTextInfo Region="38, 631, 52, 13" Text="Remark" />
+              <uc:OcrTextInfo Region="96, 631, 38, 13" Text="Code:" />
+              <uc:OcrTextInfo Region="141, 631, 78, 13" Text="PDC—Billed" />
+              <uc:OcrTextInfo Region="224, 633, 49, 11" Text="amount" />
+              <uc:OcrTextInfo Region="278, 632, 8, 12" Text="is" />
+              <uc:OcrTextInfo Region="291, 631, 40, 17" Text="higher" />
+              <uc:OcrTextInfo Region="336, 631, 28, 13" Text="than" />
+              <uc:OcrTextInfo Region="369, 631, 20, 13" Text="the" />
+              <uc:OcrTextInfo Region="394, 632, 62, 12" Text="maximum" />
+              <uc:OcrTextInfo Region="461, 633, 55, 15" Text="payment" />
+              <uc:OcrTextInfo Region="521, 632, 60, 12" Text="insurance" />
+              <uc:OcrTextInfo Region="586, 631, 44, 13" Text="allows." />
+              <uc:OcrTextInfo Region="633, 631, 22, 13" Text="The" />
+              <uc:OcrTextInfo Region="660, 633, 55, 15" Text="payment" />
+              <uc:OcrTextInfo Region="720, 632, 9, 12" Text="is" />
+              <uc:OcrTextInfo Region="734, 631, 17, 13" Text="for" />
+              <uc:OcrTextInfo Region="756, 631, 20, 13" Text="the" />
+              <uc:OcrTextInfo Region="38, 652, 49, 13" Text="allowed" />
+              <uc:OcrTextInfo Region="92, 654, 52, 11" Text="amount." />
+              <uc:OcrTextInfo Region="980, 108, 26, 26" Text="O" />
+              <uc:OcrTextInfo Region="1012, 112, 66, 17" Text="Service" />
+              <uc:OcrTextInfo Region="1085, 112, 101, 21" Text="Description" />
+              <uc:OcrTextInfo Region="1194, 112, 12, 17" Text="is" />
+              <uc:OcrTextInfo Region="1212, 117, 10, 12" Text="a" />
+              <uc:OcrTextInfo Region="1013, 143, 90, 21" Text="description" />
+              <uc:OcrTextInfo Region="1110, 143, 16, 17" Text="of" />
+              <uc:OcrTextInfo Region="1131, 143, 26, 17" Text="the" />
+              <uc:OcrTextInfo Region="1164, 143, 49, 17" Text="health" />
+              <uc:OcrTextInfo Region="1221, 148, 34, 12" Text="care" />
+              <uc:OcrTextInfo Region="1012, 174, 68, 17" Text="services" />
+              <uc:OcrTextInfo Region="1087, 179, 28, 16" Text="you" />
+              <uc:OcrTextInfo Region="1123, 174, 73, 20" Text="received," />
+              <uc:OcrTextInfo Region="1204, 174, 27, 17" Text="like" />
+              <uc:OcrTextInfo Region="1012, 210, 10, 12" Text="a" />
+              <uc:OcrTextInfo Region="1029, 205, 63, 17" Text="medical" />
+              <uc:OcrTextInfo Region="1099, 205, 37, 20" Text="visit," />
+              <uc:OcrTextInfo Region="1144, 205, 23, 17" Text="lab" />
+              <uc:OcrTextInfo Region="1173, 206, 44, 19" Text="tests," />
+              <uc:OcrTextInfo Region="1224, 210, 16, 12" Text="or" />
+              <uc:OcrTextInfo Region="1012, 236, 95, 21" Text="screenings." />
+              <uc:OcrTextInfo Region="980, 279, 26, 26" Text="@" />
+              <uc:OcrTextInfo Region="1013, 284, 74, 17" Text="Provider" />
+              <uc:OcrTextInfo Region="1094, 284, 72, 21" Text="Charges" />
+              <uc:OcrTextInfo Region="1173, 284, 12, 17" Text="is" />
+              <uc:OcrTextInfo Region="1191, 284, 26, 17" Text="the" />
+              <uc:OcrTextInfo Region="1012, 316, 63, 16" Text="amount" />
+              <uc:OcrTextInfo Region="1081, 320, 36, 16" Text="your" />
+              <uc:OcrTextInfo Region="1124, 315, 67, 21" Text="provider" />
+              <uc:OcrTextInfo Region="1198, 315, 32, 17" Text="bills" />
+              <uc:OcrTextInfo Region="1235, 315, 20, 17" Text="fol" />
+              <uc:OcrTextInfo Region="1012, 350, 36, 16" Text="your" />
+              <uc:OcrTextInfo Region="1054, 345, 37, 17" Text="visit." />
+              <uc:OcrTextInfo Region="980, 388, 26, 26" Text="O" />
+              <uc:OcrTextInfo Region="1012, 393, 71, 17" Text="Allowed" />
+              <uc:OcrTextInfo Region="1090, 393, 73, 21" Text="Charges" />
+              <uc:OcrTextInfo Region="1170, 393, 12, 17" Text="is" />
+              <uc:OcrTextInfo Region="1188, 393, 26, 17" Text="the" />
+              <uc:OcrTextInfo Region="1012, 425, 63, 16" Text="amount" />
+              <uc:OcrTextInfo Region="1081, 429, 36, 16" Text="your" />
+              <uc:OcrTextInfo Region="1124, 424, 67, 21" Text="provider" />
+              <uc:OcrTextInfo Region="1197, 424, 27, 17" Text="will" />
+              <uc:OcrTextInfo Region="1232, 424, 18, 17" Text="be" />
+              <uc:OcrTextInfo Region="1013, 455, 98, 20" Text="reimbursed;" />
+              <uc:OcrTextInfo Region="1118, 455, 30, 17" Text="this" />
+              <uc:OcrTextInfo Region="1155, 460, 34, 16" Text="may" />
+              <uc:OcrTextInfo Region="1196, 456, 25, 16" Text="not" />
+              <uc:OcrTextInfo Region="1228, 455, 18, 17" Text="be" />
+              <uc:OcrTextInfo Region="1253, 460, 2, 2" Text="•" />
+              <uc:OcrTextInfo Region="1012, 491, 45, 12" Text="same" />
+              <uc:OcrTextInfo Region="1064, 491, 18, 12" Text="as" />
+              <uc:OcrTextInfo Region="1088, 486, 25, 17" Text="the" />
+              <uc:OcrTextInfo Region="1121, 486, 67, 17" Text="Provider" />
+              <uc:OcrTextInfo Region="1195, 486, 60, 21" Text="Charge" />
+              <uc:OcrTextInfo Region="980, 528, 26, 26" Text="O" />
+              <uc:OcrTextInfo Region="1013, 533, 37, 17" Text="Paid" />
+              <uc:OcrTextInfo Region="1057, 533, 21, 21" Text="by" />
+              <uc:OcrTextInfo Region="1084, 533, 63, 17" Text="Insurer" />
+              <uc:OcrTextInfo Region="1154, 533, 12, 17" Text="is" />
+              <uc:OcrTextInfo Region="1172, 533, 26, 17" Text="the" />
+              <uc:OcrTextInfo Region="1205, 538, 50, 12" Text="amour" />
+              <uc:OcrTextInfo Region="1012, 569, 36, 16" Text="your" />
+              <uc:OcrTextInfo Region="1055, 564, 80, 17" Text="insurance" />
+              <uc:OcrTextInfo Region="1142, 564, 34, 21" Text="plan" />
+              <uc:OcrTextInfo Region="1183, 564, 27, 17" Text="will" />
+              <uc:OcrTextInfo Region="1217, 569, 29, 16" Text="pay" />
+              <uc:OcrTextInfo Region="1251, 565, 4, 16" Text="i" />
+              <uc:OcrTextInfo Region="1012, 600, 36, 16" Text="your" />
+              <uc:OcrTextInfo Region="1055, 595, 69, 21" Text="provider." />
+              <uc:OcrTextInfo Region="953, 678, 88, 18" Text="Contact" />
+              <uc:OcrTextInfo Region="1048, 683, 50, 18" Text="your" />
+              <uc:OcrTextInfo Region="1106, 678, 65, 18" Text="health" />
+              <uc:OcrTextInfo Region="1182, 678, 45, 23" Text="plan" />
+              <uc:OcrTextInfo Region="1237, 678, 12, 18" Text="if" />
+            </scg:List>
+          </uc:CVCache.OcrTexts>
+        </uc:CVCache>
+      </p:CVScope.DesignTimeCache>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Language="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Profile="Screen" Scale="3" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="aa7dc73e099aa9b300064d4a971a1a7e" Selector="&lt;wnd app='acrord32.exe' cls='AcrobatSDIWindow' title='File1.pdf - Adobe Acrobat Reader DC' /&gt;&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl idx='2' role='client' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </p:CVScope.Target>
+    </p:CVScope>
+  </Sequence>
+</Activity>
